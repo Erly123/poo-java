@@ -4,14 +4,41 @@ package ch.l;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Boligrafo boligrafoAzul = new Boligrafo();
+        boligrafoAzul.color = "azul";
+        boligrafoAzul.tapada = false;
+        boligrafoAzul.carga = 100;
+        boligrafoAzul.marca = "Layconsa";
+        boligrafoAzul.punta = 0.5;
+        boligrafoAzul.tapar();
+        System.out.println("Boligrafo Azul Creado! " +
+                "Color: " + boligrafoAzul.color +
+                " Marca: " + boligrafoAzul.marca +
+                " Tapada: " + boligrafoAzul.tapada );
+        boligrafoAzul.destapar();
+        System.out.println("Boligrafo Azul Creado! " +
+                "Color: " + boligrafoAzul.color +
+                " Marca: " + boligrafoAzul.marca +
+                " Tapada: " + boligrafoAzul.tapada);
+        boligrafoAzul.escribir("Precio bajo...");
+        System.out.println("--------------------------");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Boligrafo boligrafoRojo = new Boligrafo();
+        boligrafoRojo.color = "rojp";
+        boligrafoRojo.tapada = false;
+        boligrafoRojo.carga = 100;
+        boligrafoRojo.marca = "Pupi";
+        boligrafoRojo.punta = 0.5;
+        boligrafoRojo.destapar();
+        System.out.println("Boligrafo Rojo Creado! " +
+                "Color: " + boligrafoRojo.color +
+                " Marca: " + boligrafoRojo.marca +
+                " Tapada: " + boligrafoRojo.tapada);
+        boligrafoRojo.tapar();
+        System.out.println("Boligrafo Rojo Creado! " +
+                "Color: " + boligrafoRojo.color +
+                " Marca: " + boligrafoRojo.marca +
+                " Tapada: " + boligrafoRojo.tapada);
+        boligrafoRojo.escribir("Precio caro...");
     }
 }
