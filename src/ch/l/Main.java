@@ -6,39 +6,36 @@ public class Main {
     public static void main(String[] args) {
         Boligrafo boligrafoAzul = new Boligrafo();
         boligrafoAzul.color = "azul";
-        boligrafoAzul.tapada = false;
         boligrafoAzul.carga = 100;
         boligrafoAzul.marca = "Layconsa";
         boligrafoAzul.punta = 0.5;
         boligrafoAzul.tapar();
         System.out.println("Boligrafo Azul Creado! " +
                 "Color: " + boligrafoAzul.color +
-                " Marca: " + boligrafoAzul.marca +
-                " Tapada: " + boligrafoAzul.tapada );
+                " Marca: " + boligrafoAzul.marca );
         boligrafoAzul.destapar();
         System.out.println("Boligrafo Azul Creado! " +
                 "Color: " + boligrafoAzul.color +
-                " Marca: " + boligrafoAzul.marca +
-                " Tapada: " + boligrafoAzul.tapada);
+                " Marca: " + boligrafoAzul.marca );
         boligrafoAzul.escribir("Precio bajo...");
         System.out.println("--------------------------");
 
         Boligrafo boligrafoRojo = new Boligrafo();
         boligrafoRojo.color = "rojp";
-        boligrafoRojo.tapada = false;
         boligrafoRojo.carga = 100;
         boligrafoRojo.marca = "Pupi";
         boligrafoRojo.punta = 0.5;
-        boligrafoRojo.destapar();
-        System.out.println("Boligrafo Rojo Creado! " +
-                "Color: " + boligrafoRojo.color +
-                " Marca: " + boligrafoRojo.marca +
-                " Tapada: " + boligrafoRojo.tapada);
         boligrafoRojo.tapar();
         System.out.println("Boligrafo Rojo Creado! " +
                 "Color: " + boligrafoRojo.color +
-                " Marca: " + boligrafoRojo.marca +
-                " Tapada: " + boligrafoRojo.tapada);
+                " Marca: " + boligrafoRojo.marca );
+        boligrafoRojo.tapar();
+        System.out.println("Boligrafo Rojo Creado! " +
+                "Color: " + boligrafoRojo.color +
+                " Marca: " + boligrafoRojo.marca );
         boligrafoRojo.escribir("Precio caro...");
+
+        boligrafoAzul.status();
+        boligrafoRojo.status();
     }
 }

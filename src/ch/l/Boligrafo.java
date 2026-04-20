@@ -2,20 +2,30 @@ package ch.l;
 
 public class Boligrafo {
 
-    String color;
-    String marca;
-    double punta;
-    int carga;
-    boolean tapada;
+    protected String color;
+    protected String marca;
+    protected double punta;
+    protected int carga;
+    private boolean tapada;
 
-    void tapar() {
+    public void tapar() {
         this.tapada = true;
     }
-    void destapar() {
+    public void destapar() {
+
         this.tapada = false;
     }
-    void escribir(String texto) {
+    protected void escribir(String texto) {
         System.out.println("Escribiendo: " + texto);
+    }
+    public void status() {
+        System.out.println(("===================="));
+        System.out.println(("Color:" + this.color));
+        System.out.println(("Marca:" + this.marca));
+        System.out.println(("Punta:" + this.punta));
+        System.out.println(("Carga:" + this.carga));
+        System.out.println(("Tapada:" + this.tapada));
+        System.out.println(("===================="));
     }
 
 }
