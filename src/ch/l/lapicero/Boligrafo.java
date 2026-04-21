@@ -1,4 +1,4 @@
-package ch.l;
+package ch.l.lapicero;
 
 public class Boligrafo {
 
