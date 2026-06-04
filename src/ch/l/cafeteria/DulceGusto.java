@@ -42,7 +42,28 @@ public class DulceGusto implements MaquinaCafe {
 
     @Override
     public void hacerCafe() {
+        if (this.esEncendida()) {
+            if (this.poseeCapuchino) {
+                if (this.modoCafeSeleccionado != null) {
+                    this.añadirAguaCaldera(300);
+                    this.conectarCalentador();
+                    System.out.println("Haciendo " + this.modoCafeSeleccionado.getDescripcion() + "...");
+                    System.out.println("Café listo!");
+                    this.vaciarAguaCaldera();
+                    this.desconectarCalentador();
+                } else {
+                    System.out.println("Modo de Cafe no fue selecionado. Selecione antes de proseguir.");
+                }
+            } else {
+                System.out.println("Dolce Gusto está sem o cachimbo. Coloque o cachimbo com o pó de café.");
+            }
+        } else {
+            System.out.println("Dolce Gusto está desligada.");
+        }
 
+    }
+    private boolean esEncendida() {
+        return this.encendida;
     }
     private  void añadirAguaCaldera(int ctdAguaCaldera) {
         System.out.println("Añadiendo " + ctdAguaCaldera + "ml de agua en la cladera...");
